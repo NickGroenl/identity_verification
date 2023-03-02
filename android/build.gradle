@@ -1,0 +1,113 @@
+//noinspection GrPackage
+group 'com.microblink.identityverification.flutter'
+version '1.0-SNAPSHOT'
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+buildscript {
+    ext.kotlin_version = '1.6.21'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.microblink.com' }
+        maven { url 'https://raw.githubusercontent.com/iProov/android/master/maven/'}
+        maven {
+            url = uri("https://maven.pkg.github.com/IdentityVerification/identity-verification-android")
+            credentials {
+                Properties properties = new Properties()
+                if (project.rootProject.file('local.properties').exists()) {
+                    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+                }
+                // make sure to set these properties in your local.properties file,
+                // the username is your github username and the token is the access token you generated
+                username = properties.get("github.packages.username") ?: System.getenv("GITHUB_USERNAME")
+                password = properties.get("github.packages.token") ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+
+android {
+    compileSdkVersion 33
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+}
+
+
+dependencies {
+
+    def idvVersion = "3.4.0"
+
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation "com.microblink.identityverification:identity-verification-lib-blinkid:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-core:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-document-verification:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-facetec:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-iproov:$idvVersion"
+    implementation("com.microblink:blinkid:5.20.0")
+
+
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.9'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "io.mockk:mockk:1.12.5"
+
+
+    //Comment out first when building from flutter
+//    implementation files("$flutterRoot/bin/cache/artifacts/engine/android-x64/flutter.jar")
+
+
+}
