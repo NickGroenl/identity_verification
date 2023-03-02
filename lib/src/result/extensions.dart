@@ -32,19 +32,20 @@ IdvResult createIdvResult(
   }).toList();
   return IdvResult(
       documentResultFields: resultField!,
-      frontSideDocumentImage:
-          Image.memory(blinkIdDocumentResult!.frontSideDocumentImage!),
-      backSideDocumentImage: blinkIdDocumentResult.backSideDocumentImage != null
-          ? Image.memory(blinkIdDocumentResult.backSideDocumentImage!)
+      frontSideDocumentImage:blinkIdDocumentResult?.frontSideDocumentImage! != null
+          ? blinkIdDocumentResult?.frontSideDocumentImage!
           : null,
-      faceImage: blinkIdDocumentResult.faceImage != null
-          ? Image.memory(blinkIdDocumentResult.faceImage!)
+      backSideDocumentImage: blinkIdDocumentResult?.backSideDocumentImage! != null
+          ? blinkIdDocumentResult?.backSideDocumentImage!
           : null,
-      signatureImage: blinkIdDocumentResult.signatureImage != null
-          ? Image.memory(blinkIdDocumentResult.signatureImage!)
+      faceImage: blinkIdDocumentResult?.faceImage! != null
+          ? blinkIdDocumentResult?.faceImage!
           : null,
-      classInfo: blinkIdDocumentResult.classInfo,
+      signatureImage: blinkIdDocumentResult?.signatureImage != null
+          ? blinkIdDocumentResult?.signatureImage!
+          : null,
+      classInfo: blinkIdDocumentResult?.classInfo,
       livenessImage: facetecImage,
-      frontImageAnalysisResult: blinkIdDocumentResult.frontImageAnalysisResult,
-      backImageAnalysisResult: blinkIdDocumentResult.backImageAnalysisResult);
+      frontImageAnalysisResult: blinkIdDocumentResult?.frontImageAnalysisResult,
+      backImageAnalysisResult: blinkIdDocumentResult?.backImageAnalysisResult);
 }

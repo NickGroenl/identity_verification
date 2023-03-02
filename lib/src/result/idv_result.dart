@@ -1,17 +1,18 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:identity_verification_flutter/src/configuration/builders.dart';
-import 'package:identity_verification_flutter/src/result/result_fields.dart';
+import 'package:newhonekapp/microblink/src/configuration/builders.dart';
+import 'package:newhonekapp/microblink/src/result/result_fields.dart';
+import 'dart:typed_data';
 
 class IdvResult {
   final List<DocumentResultField> documentResultFields;
-  final Image? faceImage;
+  final Uint8List? faceImage;
   final Image? livenessImage;
 
-  final Image? frontSideDocumentImage;
-  final Image? backSideDocumentImage;
-  final Image? signatureImage;
+  final Uint8List? frontSideDocumentImage;
+  final Uint8List? backSideDocumentImage;
+  final Uint8List? signatureImage;
 
   final ClassInfo? classInfo;
   final ImageAnalysisResult? frontImageAnalysisResult;
@@ -21,8 +22,8 @@ class IdvResult {
       {required this.documentResultFields,
       required this.frontSideDocumentImage,
       this.livenessImage,
-      this.faceImage,
-      this.backSideDocumentImage,
+      required this.faceImage,
+      required this.backSideDocumentImage,
       this.signatureImage,
       this.classInfo,
       this.frontImageAnalysisResult,
