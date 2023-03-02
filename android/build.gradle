@@ -79,7 +79,7 @@ android {
 
 dependencies {
 
-    def idvVersion = "3.4.0"
+    def idvVersion = "v3.4.0"
 
 
     implementation 'androidx.multidex:multidex:2.0.1'
