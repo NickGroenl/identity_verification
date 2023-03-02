@@ -1,8 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:newhonekapp/microblink/src/configuration/builders.dart';
-import 'package:newhonekapp/microblink/src/result/result_fields.dart';
+import 'package:identity_verification_flutter/src/configuration/builders.dart';
+import 'package:identity_verification_flutter/src/result/result_fields.dart';
 import 'dart:typed_data';
 
 class IdvResult {
