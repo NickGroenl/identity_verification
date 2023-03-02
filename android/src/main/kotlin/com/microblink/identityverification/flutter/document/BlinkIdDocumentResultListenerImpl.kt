@@ -54,7 +54,7 @@ class BlinkIdDocumentResultListenerImpl(private val idvDartApi: IdvDartApi) :
             dartDocResult.setFrontSideDocumentImage(it.toByteArray())
         }
         result.backSideDocumentImage?.let {
-            dartDocResult.setBackSideDocumentImage(it.toByteArray())
+            dartDocResult.setFrontSideDocumentImage(it.toByteArray())
         }
         result.frontImageAnalysisResult?.let {
             dartDocResult.setFrontImageAnalysisResult(
@@ -62,7 +62,7 @@ class BlinkIdDocumentResultListenerImpl(private val idvDartApi: IdvDartApi) :
             )
         }
         result.backImageAnalysisResult?.let {
-            dartDocResult.setBackImageAnalysisResult(
+            dartDocResult.setFrontImageAnalysisResult(
                 getDartImageAnalysisResult(it)
             )
         }

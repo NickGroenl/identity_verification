@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,20 @@
 		4196BC4128923E6700C7F88A /* identity_verification_flutter_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196BC4028923E6700C7F88A /* identity_verification_flutter_tests.swift */; };
 		4196BC49289268E100C7F88A /* IdentityVerificationSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196BC48289268E100C7F88A /* IdentityVerificationSDKTests.swift */; };
 		4196BC4B2892707300C7F88A /* IdentityVerificationBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196BC4A2892707300C7F88A /* IdentityVerificationBuilderTests.swift */; };
+		41BFB6BA28C0871F00835F67 /* DocumentVerification.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB69E28C0841800835F67 /* DocumentVerification.xcframework */; };
+		41BFB6BB28C0871F00835F67 /* DocumentVerification.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB69E28C0841800835F67 /* DocumentVerification.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		41BFB6BD28C0872100835F67 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6A228C0841D00835F67 /* FaceTecSDK.xcframework */; };
+		41BFB6BE28C0872100835F67 /* FaceTecSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6A228C0841D00835F67 /* FaceTecSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		41BFB6BF28C0872300835F67 /* IdentityVerification.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB69A28C0709100835F67 /* IdentityVerification.xcframework */; settings = {ATTRIBUTES = (Required, ); }; };
+		41BFB6C028C0872300835F67 /* IdentityVerification.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB69A28C0709100835F67 /* IdentityVerification.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		41BFB6C128C0872500835F67 /* iProov.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6A728C0842300835F67 /* iProov.xcframework */; };
+		41BFB6C228C0872500835F67 /* iProov.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6A728C0842300835F67 /* iProov.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		41BFB6C328C0872700835F67 /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6AA28C0842600835F67 /* Microblink.xcframework */; };
+		41BFB6C428C0872700835F67 /* Microblink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6AA28C0842600835F67 /* Microblink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		41BFB6C528C0872A00835F67 /* SocketIO.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6AD28C0842A00835F67 /* SocketIO.xcframework */; };
+		41BFB6C628C0872A00835F67 /* SocketIO.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6AD28C0842A00835F67 /* SocketIO.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		41BFB6C728C0872C00835F67 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6B028C0843000835F67 /* Starscream.xcframework */; };
+		41BFB6C828C0872C00835F67 /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41BFB6B028C0843000835F67 /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -41,6 +55,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				41BFB6C228C0872500835F67 /* iProov.xcframework in Embed Frameworks */,
+				41BFB6C028C0872300835F67 /* IdentityVerification.xcframework in Embed Frameworks */,
+				41BFB6C628C0872A00835F67 /* SocketIO.xcframework in Embed Frameworks */,
+				41BFB6C828C0872C00835F67 /* Starscream.xcframework in Embed Frameworks */,
+				41BFB6BE28C0872100835F67 /* FaceTecSDK.xcframework in Embed Frameworks */,
+				41BFB6C428C0872700835F67 /* Microblink.xcframework in Embed Frameworks */,
+				41BFB6BB28C0871F00835F67 /* DocumentVerification.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -61,6 +82,13 @@
 		4196BC4028923E6700C7F88A /* identity_verification_flutter_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = identity_verification_flutter_tests.swift; sourceTree = "<group>"; };
 		4196BC48289268E100C7F88A /* IdentityVerificationSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityVerificationSDKTests.swift; sourceTree = "<group>"; };
 		4196BC4A2892707300C7F88A /* IdentityVerificationBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityVerificationBuilderTests.swift; sourceTree = "<group>"; };
+		41BFB69A28C0709100835F67 /* IdentityVerification.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IdentityVerification.xcframework; path = .symlinks/plugins/identity_verification_flutter/ios/../../../../../../ios/libs/IdentityVerification.xcframework; sourceTree = "<group>"; };
+		41BFB69E28C0841800835F67 /* DocumentVerification.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DocumentVerification.xcframework; path = .symlinks/plugins/identity_verification_flutter/ios/../../../../../../ios/libs/DocumentVerification.xcframework; sourceTree = "<group>"; };
+		41BFB6A228C0841D00835F67 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = .symlinks/plugins/identity_verification_flutter/ios/../../../../../../ios/libs/FaceTecSDK.xcframework; sourceTree = "<group>"; };
+		41BFB6A728C0842300835F67 /* iProov.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = iProov.xcframework; path = .symlinks/plugins/identity_verification_flutter/ios/../../../../../../ios/libs/iProov.xcframework; sourceTree = "<group>"; };
+		41BFB6AA28C0842600835F67 /* Microblink.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Microblink.xcframework; path = .symlinks/plugins/identity_verification_flutter/ios/../../../../../../ios/libs/Microblink.xcframework; sourceTree = "<group>"; };
+		41BFB6AD28C0842A00835F67 /* SocketIO.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SocketIO.xcframework; path = .symlinks/plugins/identity_verification_flutter/ios/../../../../../../ios/libs/SocketIO.xcframework; sourceTree = "<group>"; };
+		41BFB6B028C0843000835F67 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = .symlinks/plugins/identity_verification_flutter/ios/../../../../../../ios/libs/Starscream.xcframework; sourceTree = "<group>"; };
 		4FD5F3B02E65A6FE0EB2581D /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		679E18E1ADFF316369F84F8D /* Pods-identity_verification_flutter_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-identity_verification_flutter_tests.release.xcconfig"; path = "Target Support Files/Pods-identity_verification_flutter_tests/Pods-identity_verification_flutter_tests.release.xcconfig"; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -92,8 +120,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41BFB6BF28C0872300835F67 /* IdentityVerification.xcframework in Frameworks */,
+				41BFB6C328C0872700835F67 /* Microblink.xcframework in Frameworks */,
+				41BFB6C728C0872C00835F67 /* Starscream.xcframework in Frameworks */,
+				41BFB6C128C0872500835F67 /* iProov.xcframework in Frameworks */,
+				41BFB6C528C0872A00835F67 /* SocketIO.xcframework in Frameworks */,
 				415F1CF32844B80F0005F088 /* libiconv.tbd in Frameworks */,
 				415F1CF52844B81D0005F088 /* libz.tbd in Frameworks */,
+				41BFB6BA28C0871F00835F67 /* DocumentVerification.xcframework in Frameworks */,
+				41BFB6BD28C0872100835F67 /* FaceTecSDK.xcframework in Frameworks */,
 				415F1CF12844B8020005F088 /* libc++.tbd in Frameworks */,
 				DE84BE1575161246D2A292FE /* Pods_Runner.framework in Frameworks */,
 			);
@@ -118,6 +153,13 @@
 		401EC474E51D3DA30CD29B73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41BFB6B028C0843000835F67 /* Starscream.xcframework */,
+				41BFB6AD28C0842A00835F67 /* SocketIO.xcframework */,
+				41BFB6AA28C0842600835F67 /* Microblink.xcframework */,
+				41BFB6A728C0842300835F67 /* iProov.xcframework */,
+				41BFB6A228C0841D00835F67 /* FaceTecSDK.xcframework */,
+				41BFB69E28C0841800835F67 /* DocumentVerification.xcframework */,
+				41BFB69A28C0709100835F67 /* IdentityVerification.xcframework */,
 				415F1CF42844B8180005F088 /* libz.tbd */,
 				415F1CF22844B80B0005F088 /* libiconv.tbd */,
 				415F1CF02844B7FB0005F088 /* libc++.tbd */,
@@ -293,7 +335,6 @@
 /* Begin PBXShellScriptBuildPhase section */
 		3B06AD1E1E4923F5004D2608 /* Thin Binary */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -325,7 +366,6 @@
 		};
 		9740EEB61CF901F6004384FC /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -500,7 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 95BUBR8B6D;
+				DEVELOPMENT_TEAM = F7853DJ33G;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -719,7 +759,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 95BUBR8B6D;
+				DEVELOPMENT_TEAM = F7853DJ33G;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -743,7 +783,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 95BUBR8B6D;
+				DEVELOPMENT_TEAM = F7853DJ33G;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

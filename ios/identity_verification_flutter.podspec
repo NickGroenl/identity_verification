@@ -23,8 +23,8 @@ A new Flutter plugin project.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
 
-  # s.preserve_paths = 'libs/IdentityVerification.xcframework', 'libs/Microblink.xcframework', 'libs/FaceTecSDK.xcframework', 'libs/DocumentVerification.xcframework', 'libs/iProov.xcframework', 'libs/Starscream.xcframework', 'libs/SocketIO.xcframework'
+  s.preserve_paths = 'libs/IdentityVerification.xcframework', 'libs/Microblink.xcframework', 'libs/FaceTecSDK.xcframework', 'libs/DocumentVerification.xcframework', 'libs/iProov.xcframework', 'libs/Starscream.xcframework', 'libs/SocketIO.xcframework'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework IdentityVerification' }
   s.frameworks = 'IdentityVerification'
-  s.ios.vendored_frameworks =  'libs/Microblink.xcframework', 'libs/DocumentVerification.xcframework', 'libs/IdentityVerification.xcframework', 'libs/FaceTecSDK.xcframework', 'libs/iProov.xcframework', 'libs/Starscream.xcframework', 'libs/SocketIO.xcframework'
+  s.ios.vendored_frameworks =  'libs/Microblink.xcframework/ios-arm64/Microblink.framework', 'libs/DocumentVerification.xcframework/ios-arm64/DocumentVerification.framework', 'libs/IdentityVerification.xcframework', 'libs/FaceTecSDK.xcframework', 'libs/iProov.xcframework', 'libs/Starscream.xcframework', 'libs/SocketIO.xcframework'
 end
