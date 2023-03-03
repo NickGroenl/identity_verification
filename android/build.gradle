@@ -79,17 +79,12 @@ android {
 
 dependencies {
 
-    def idvVersion = "v3.4.0"
+    def idvVersion = "3.4.0"
 
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation "com.microblink.identityverification:identity-verification-lib-blinkid:$idvVersion"
-    implementation "com.microblink.identityverification:identity-verification-lib-core:$idvVersion"
-    implementation "com.microblink.identityverification:identity-verification-lib-document-verification:$idvVersion"
-    implementation "com.microblink.identityverification:identity-verification-lib-facetec:$idvVersion"
-    implementation "com.microblink.identityverification:identity-verification-lib-iproov:$idvVersion"
-    implementation("com.microblink:blinkid:5.20.0")
+    
 
 
 
