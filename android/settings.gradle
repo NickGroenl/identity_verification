@@ -1,3 +1,4 @@
+
 rootProject.name = 'identity_verification_flutter'
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -9,14 +10,8 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://maven.pkg.github.com/IdentityVerification/identity-verification-android")
             credentials {
-                Properties properties = new Properties()
-                if (project.rootProject.file('local.properties').exists()) {
-                    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-                }
-                // make sure to set these properties in your local.properties file,
-                // the username is your github username and the token is the access token you generated
-                username = properties.get("github.packages.username") ?: System.getenv("GITHUB_USERNAME")
-                password = properties.get("github.packages.token") ?: System.getenv("GITHUB_TOKEN")
+                username='paypal_sgerritz'
+                password='AKCp8jQ8tAahqpT5JjZ4FRP2mW7GMoFZ674kGqHmupTesKeAY2G8NcmPKLuTxTGkKjDLRzDUQ'
             }
         }
     }

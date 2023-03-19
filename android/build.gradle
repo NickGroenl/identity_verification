@@ -38,14 +38,9 @@ rootProject.allprojects {
         maven {
             url = uri("https://maven.pkg.github.com/IdentityVerification/identity-verification-android")
             credentials {
-                Properties properties = new Properties()
-                if (project.rootProject.file('local.properties').exists()) {
-                    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-                }
-                // make sure to set these properties in your local.properties file,
-                // the username is your github username and the token is the access token you generated
-                username = properties.get("github.packages.username") ?: System.getenv("GITHUB_USERNAME")
-                password = properties.get("github.packages.token") ?: System.getenv("GITHUB_TOKEN")
+                username='paypal_sgerritz'
+                password='AKCp8jQ8tAahqpT5JjZ4FRP2mW7GMoFZ674kGqHmupTesKeAY2G8NcmPKLuTxTGkKjDLRzDUQ'
+
             }
         }
 
@@ -88,10 +83,10 @@ dependencies {
     
 
 // identity-verification-lib-core, identity-verification-lib-blinkid, identity-verification-lib-facetec and facetec-sdk-9.4.5 downloaded in previous step:
-    implementation files('../libs/identity-verification-lib-core.aar') // the `../libs/` part should be a relative path to the `libs` folder in your Android Studio project
-    implementation files('../libs/identity-verification-lib-facetec.aar') // make sure identity-verification-lib-facetec is above facetec-sdk-9.4.5 in the dependency list
-    implementation files('../libs/facetec-sdk-9.4.5.aar')
-    implementation files('../libs/identity-verification-lib-blinkid.aar')
+    implementation ('git@github.com:NickGroenl/identity_verification.git/android/libs/identity-verification-lib-core.aar') // the `../libs/` part should be a relative path to the `libs` folder in your Android Studio project
+    implementation ('git@github.com:NickGroenl/identity_verification.git/android/libs/identity-verification-lib-facetec.aar') // make sure identity-verification-lib-facetec is above facetec-sdk-9.4.5 in the dependency list
+    implementation ('git@github.com:NickGroenl/identity_verification.git/android/libs/facetec-sdk-9.4.5.aar')
+    implementation ('git@github.com:NickGroenl/identity_verification.git/android/libs/identity-verification-lib-blinkid.aar')
 
     implementation 'com.google.android.material:material:1.6.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
