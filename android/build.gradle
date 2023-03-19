@@ -38,8 +38,8 @@ rootProject.allprojects {
         maven {
             url = uri("https://maven.pkg.github.com/IdentityVerification/identity-verification-android")
             credentials {
-                username='paypal_sgerritz'
-                password='AKCp8jQ8tAahqpT5JjZ4FRP2mW7GMoFZ674kGqHmupTesKeAY2G8NcmPKLuTxTGkKjDLRzDUQ'
+                username='labictmarketing'
+                password='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'
 
             }
         }
