@@ -74,12 +74,6 @@ android {
 
 
 dependencies {
-
-    def idvVersion = "3.4.0"
-
-
-    implementation 'androidx.multidex:multidex:2.0.1'
-
     
 
 // identity-verification-lib-core, identity-verification-lib-blinkid, identity-verification-lib-facetec and facetec-sdk-9.4.5 downloaded in previous step:
