@@ -88,23 +88,30 @@ dependencies {
     implementation files('/Users/nick/Desktop/honek/identity/android/libs/facetec-sdk-9.4.5.aar')
     implementation files('/Users/nick/Desktop/honek/identity/android/libs/identity-verification-lib-blinkid.aar')
 
+    def idvVersion = "3.4.0"
+
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation "com.microblink.identityverification:identity-verification-lib-blinkid:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-core:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-document-verification:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-facetec:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-iproov:$idvVersion"
+    implementation("com.microblink:blinkid:5.20.0")
+
+
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.6.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.9'
     testImplementation 'junit:junit:4.13.2'
     testImplementation "io.mockk:mockk:1.12.5"
-
-implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.30'
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
-    implementation 'com.squareup.okhttp3:okhttp:3.12.12'
-    api('com.microblink:blinkid:5.15.2@aar') {
-    	transitive = true
-	}
 
 }
