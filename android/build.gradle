@@ -81,7 +81,6 @@ dependencies {
     implementation files('/Users/nick/Desktop/honek/identity/android/libs/identity-verification-lib-facetec.aar') // make sure identity-verification-lib-facetec is above facetec-sdk-9.4.5 in the dependency list
     implementation files('/Users/nick/Desktop/honek/identity/android/libs/facetec-sdk-9.4.5.aar')
     implementation files('/Users/nick/Desktop/honek/identity/android/libs/identity-verification-lib-blinkid.aar')
-    implementation files('/Users/nick/Desktop/honek/identity/android/libs/iproov-8.3.0.aar')
 
     def idvVersion = "3.4.0"
 
@@ -89,8 +88,8 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
     
-    //implementation "com.microblink.identityverification:identity-verification-lib-document-verification:$idvVersion"
-    //implementation "com.microblink.identityverification:identity-verification-lib-iproov:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-document-verification:$idvVersion"
+    implementation "com.microblink.identityverification:identity-verification-lib-iproov:$idvVersion"
     implementation("com.microblink:blinkid:6.1.1")
 
 
